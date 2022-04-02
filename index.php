@@ -1,10 +1,10 @@
 <?php
-   $width = 600;
-   $height = 300;
-   $font_1;
+   $width = 1011;
+   $height = 638;
+   $font_1 = 14;
    $font_2;
    $font_3;
-   $jarak_bawah;
+   $jarak_text = 15;
 
 ?>
 <!DOCTYPE html>
@@ -16,10 +16,12 @@
    <style>
       :root{
          --warna_background: #ffff00;
-         --lebar_print : 1011px;
-         --tinggi_print : 638px;
+         --lebar_print : <?php echo $width; ?>px;
+         --tinggi_print : <?php echo $height; ?>px;
+         --jarak_text : <?php echo $jarak_text; ?>px;
+         --font_satu : <?php echo $font_1; ?>pt;
       }
-      body{font-size: 14pt;}
+      body{font-size: var(--font_satu);}
       .wrapper{width: 90%;margin: 15px auto;margin-bottom: 15px;}
       .wrap-id-card{
          background: var(--warna_background);
@@ -27,7 +29,7 @@
          height: var(--tinggi_print);
          border: 1px solid #000;
       }
-      .item-informasi{margin-top: 15px;}
+      .item-informasi{margin-top: var(--jarak_text);}
       img{width: 100%;display: inline-block;}
       .bilah-kiri-belakang{width: 50%;float: left;}
       .bilah-kanan-belakang{width: 50%;float: left;}
