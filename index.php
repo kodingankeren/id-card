@@ -2,11 +2,6 @@
    $width = isset($_GET['w']) ? $_GET['w'] : 1011;
    $height = isset($_GET['h']) ? $_GET['h'] : 638;
 
-   $kanan_dalam_padding_atas = 15;
-
-
-   $kanan_dalam_padding_kiri_kanan = 15;
-
    $jarak_text = $height / 42.5333333333;
    
    $font_1 = $height / 45.5714285714;
@@ -36,7 +31,6 @@
          --warna_background: #ffff00;
          --lebar_print : <?php echo $width; ?>px;
          --tinggi_print : <?php echo $height; ?>px;
-         --kanan_dalam_padding_kiri_kanan : <?php echo $jarak_text; ?>px;
          --jarak_text : <?php echo $jarak_text; ?>px;
          
          --h_15 : <?php echo $h_15; ?>px;
