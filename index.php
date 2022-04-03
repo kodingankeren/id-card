@@ -93,9 +93,9 @@
       }
       .garis-kanan{border-right: 1px solid #000;height: var(--tinggi_print);}
       .logo{padding: var(--h_15) var(--w_15) var(--h_15) var(--w_15);margin-top: var(--h_15);}
-      .foto{margin-top: var(--h_60);}
-      .foto img{display: block;margin: 0 auto;height: var(--h_274);width: auto;}
-      .logo img{display: block;margin: 0 auto;height: var(--h_162);width: auto;}
+      .foto{margin-top: var(--h_60);padding: var(--h_15) var(--w_15) var(--h_15) var(--w_15);}
+      .foto img{display: block;margin: 0 auto;max-height: var(--h_274);width: 100%;}
+      .logo img{display: block;margin: 0 auto;max-height: var(--h_162);width: 100%;}
       
       @media only screen and (max-width:768px){
       }
