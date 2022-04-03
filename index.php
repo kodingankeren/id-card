@@ -2,10 +2,6 @@
    $width = isset($_GET['w']) ? $_GET['w'] : 1011;
    $height = isset($_GET['h']) ? $_GET['h'] : 638;
 
-   // $font_1 = 14;
-   $font_2;
-   $font_3;
-   // $jarak_text = 15;
    $kanan_dalam_padding_atas = 15;
 
 
