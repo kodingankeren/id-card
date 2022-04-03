@@ -1,10 +1,32 @@
 <?php
-   $width = 1011;
-   $height = 638;
-   $font_1 = 14;
+   $width = isset($_GET['w']) ? $_GET['w'] : 1011;
+   $height = isset($_GET['h']) ? $_GET['h'] : 638;
+
+   // $font_1 = 14;
    $font_2;
    $font_3;
-   $jarak_text = 15;
+   // $jarak_text = 15;
+   $kanan_dalam_padding_atas = 15;
+
+
+   $kanan_dalam_padding_kiri_kanan = 15;
+
+   $jarak_text = $height / 42.5333333333;
+   
+   $font_1 = $height / 45.5714285714;
+
+   $h_15 = $height / 42.53333333333333;
+   $h_30 = $height / 21.2666666667;
+   $h_60 = $height / 10.63333333333333;
+   $h_162 = $height / 3.938271604938272;
+   $h_274 = $height / 2.328467153284672;
+   $h_450 = $height / 1.417777777777778;
+   
+   $w_15 = $width / 67.4;
+   $w_50 = $width / 20.22;
+   $w_60 = $width / 16.85;
+   
+
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +40,20 @@
          --warna_background: #ffff00;
          --lebar_print : <?php echo $width; ?>px;
          --tinggi_print : <?php echo $height; ?>px;
+         --kanan_dalam_padding_kiri_kanan : <?php echo $jarak_text; ?>px;
          --jarak_text : <?php echo $jarak_text; ?>px;
+         
+         --h_15 : <?php echo $h_15; ?>px;
+         --h_30 : <?php echo $h_30; ?>px;
+         --h_60 : <?php echo $h_60; ?>px;
+         --h_162 : <?php echo $h_162; ?>px;
+         --h_274 : <?php echo $h_274; ?>px;
+         --h_450 : <?php echo $h_450; ?>px;
+         
+         --w_15 : <?php echo $w_15; ?>px;
+         --w_50 : <?php echo $w_50; ?>px;
+         --w_60 : <?php echo $w_60; ?>px;
+
          --font_satu : <?php echo $font_1; ?>pt;
       }
       body{font-size: var(--font_satu);}
@@ -30,18 +65,23 @@
          border: 1px solid #000;
       }
       .item-informasi{margin-top: var(--jarak_text);}
+      .bingkai-kanan{padding: var(--h_30) var(--w_15) var(--h_15) var(--w_60);}
+      .informasi{margin-top: var(--h_30);}
+      .depan-bawah{margin-top: var(--w_50);padding-left: var(--w_50);}
       img{width: 100%;display: inline-block;}
       .bilah-kiri-belakang{width: 50%;float: left;}
       .bilah-kanan-belakang{width: 50%;float: left;}
-      .atas{min-height: 450px;border-bottom: 1px solid #000;padding: 60px 15px 15px 60px;}
-      .atas ol{padding: 0 0 0 15px;}
-      .bawah{padding: 15px;}
+      .atas{min-height: var(--h_450);
+         border-bottom: 1px solid #000;
+         padding: var(--h_60) var(--w_15) var(--h_15) var(--w_60);}
+      .atas ol{padding: 0 0 0 var(--w_15);}
+      .bawah{padding: var(--h_15) var(--w_15) var(--h_15) var(--w_15);}
       .bilah-kiri{width: 30%;float: left;}
       .bilah-kanan{width: 70%;float: left;}
       .text-center{text-align: center;}
       .text-right{text-align: right;}
-      .mt-3{margin-top: 15px;}
-      .p-3{padding: 15px;}
+      .mt-3{margin-top: var(--h_15);}
+      .p-3{padding: var(--h_15) var(--w_15) var(--h_15) var(--w_15);}
       .clear{clear: both;}
       .row::after{content:"";clear:both;display:table}
       .clear{clear: both;}
@@ -61,19 +101,19 @@
       .row [class*="col-"] {
          float: left;
       }
-      .informasi-detail{
-         padding-left: 15px;
-      }
       .garis-kanan{border-right: 1px solid #000;height: var(--tinggi_print);}
-      .logo{padding: 15px;margin-top: 15px;}
-      .foto{margin-top: 60px;}
-      .depan-bawah{margin-top: 60px;padding-left: 50px;}
-      .informasi{margin-top: 30px;padding-left: 50px;}
+      .logo{padding: var(--h_15) var(--w_15) var(--h_15) var(--w_15);margin-top: var(--h_15);}
+      .foto{margin-top: var(--h_60);}
+      .foto img{display: block;margin: 0 auto;height: var(--h_274);width: auto;}
+      .logo img{display: block;margin: 0 auto;height: var(--h_162);width: auto;}
+      
       @media only screen and (max-width:768px){
       }
       @media print {
-         .wrapper{width: 100%;margin: 15px auto;margin-bottom: 15px;}
+         .wrapper{width: 100%;margin: var(--h_15) auto;margin-bottom: var(--h_15);}
       }
+
+
    </style>
 </head>
 <body>
@@ -94,13 +134,13 @@
             </div>
          </div>
          <div class="bilah-kanan">
-            <div class="p-3">
-               <div class="text-center mt-3">
+            <div class="bingkai-kanan">
+               <div class="text-center">
                   DINAS TENAGA KERJA <br>
                   KABUPATEN WONOGIRI <br>
                   Jl. Pemuda I No. 5 Wonogiri, 57612 Telp: 0273321029
                </div>
-               <div class="informasi mt-3">
+               <div class="informasi">
                   <div class="row item-informasi">
                      <div class="col-3">Nama </div>
                      <div class="col-1 text-center">:</div>
