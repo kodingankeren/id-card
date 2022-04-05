@@ -39,6 +39,7 @@
    $h_15 = $height / ($height / $pixel_15);
    
    $h_30 = $height / ($height / $pixel_30);
+   $h_50 = $height / ($height / $pixel_50);
 
    $h_60 = $height / ($height / $pixel_60);
    $h_162 = $height / ($height / $pixel_162);
@@ -76,6 +77,7 @@
          --h_450 : <?php echo $h_450; ?>px;
          
          --w_15 : <?php echo $w_15; ?>px;
+         --h_50 : <?php echo $h_50; ?>px;
          --w_50 : <?php echo $w_50; ?>px;
          --w_60 : <?php echo $w_60; ?>px;
 
@@ -96,7 +98,7 @@
       .bilah-kanan{width: <?php echo $width_bilah_kanan; ?>px;float: left;}
 
       .informasi{margin-top: var(--h_30);}
-      .depan-bawah{margin-top: var(--w_50);padding-left: var(--w_50);}
+      .depan-bawah{margin-top: var(--h_50);padding-left: var(--w_50);}
       img{width: 100%;display: inline-block;}
       .bilah-kiri-belakang{width: 50%;float: left;}
       .bilah-kanan-belakang{width: 50%;float: left;}
@@ -178,6 +180,7 @@
                   DINAS TENAGA KERJA <br>
                   KABUPATEN WONOGIRI <br>
                   KABUPATEN WONOGIRI <br>
+                  KABUPATEN WONOGIRI <br>
                   Jl. Pemuda I No. 5 Wonogiri, 57612 Telp: 0273321029
                </div>
                <div class="informasi">
@@ -238,7 +241,6 @@
                   <div class="col-8">
                      <div class="text-center">
                         PENGANTAR KERJA AHLI MUDA
-                        <br>
                         <br>
                         <br>
                         <br>

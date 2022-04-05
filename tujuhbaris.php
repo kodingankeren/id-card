@@ -96,7 +96,7 @@
       .bilah-kanan{width: <?php echo $width_bilah_kanan; ?>px;float: left;}
 
       .informasi{margin-top: var(--h_30);}
-      .depan-bawah{margin-top: var(--w_50);padding-left: var(--w_50);}
+      .depan-bawah{margin-top: var(--h_30);padding-left: var(--w_50);}
       img{width: 100%;display: inline-block;}
       .bilah-kiri-belakang{width: 50%;float: left;}
       .bilah-kanan-belakang{width: 50%;float: left;}
@@ -176,6 +176,8 @@
                <div class="text-center">
                   DINAS TENAGA KERJA <br>
                   DINAS TENAGA KERJA <br>
+                  DINAS TENAGA KERJA <br>
+                  KABUPATEN WONOGIRI <br>
                   KABUPATEN WONOGIRI <br>
                   KABUPATEN WONOGIRI <br>
                   Jl. Pemuda I No. 5 Wonogiri, 57612 Telp: 0273321029
@@ -238,7 +240,6 @@
                   <div class="col-8">
                      <div class="text-center">
                         PENGANTAR KERJA AHLI MUDA
-                        <br>
                         <br>
                         <br>
                         <br>
