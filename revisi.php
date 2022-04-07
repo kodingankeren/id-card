@@ -2,7 +2,7 @@
    $width_cm = isset($_GET['w']) ? $_GET['w'] : 8.1; // dalam cm
    $height_cm = isset($_GET['h']) ? $_GET['h'] : 5.2; // dalam cm
 
-
+   $default_ukuran_width_kertas = 21; // dalam cm
    $default_width_foto_cm = 2.9; // dalam cm
    $default_height_foto_cm = 3.7; // dalam cm
 
@@ -16,7 +16,8 @@
    
    $default_width_foto = $default_width_foto_cm * $pixel_convert;
    $default_height_foto = $default_height_foto_cm * $pixel_convert;
-
+   $ukuran_kertas = $default_ukuran_width_kertas * $pixel_convert;
+   
    $width_foto = $width / ($width / $default_width_foto);
    $height_foto = $height / ($height / $default_height_foto);
 
@@ -145,11 +146,11 @@
       @media only screen and (max-width:768px){
       }
       @media print {
-
-      body{width: 300000px;}
-      .wrapper{float: left;width: var(--lebar_print);margin: 0;}
+         body{width: <?php echo $ukuran_kertas; ?>px;}
+         .wrapper{float: left;width: var(--lebar_print);margin: 0;}
       }
-
+      body{width: <?php echo $ukuran_kertas; ?>px;}
+      .wrapper{float: left;width: var(--lebar_print);margin: 0;}
 
    </style>
 </head>
